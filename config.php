@@ -1,14 +1,14 @@
 <?php
 
-$host = 'localhost';
+$host = 'db_iot';
 $db   = 'esp32_dashboard';
 $user = 'root';
-$pass = '';
+$pass = '123456';
 
 try {
 
     $pdo = new PDO(
-        "mysql:host=$host;dbname=$db;charset=utf8mb4",
+        "mysql:host=$host;port=3306;dbname=$db;charset=utf8mb4",
         $user,
         $pass
     );

@@ -1,0 +1,22 @@
+services:
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: esp32_web
+
+    ports:
+      - "8889:80"
+
+    volumes:
+      - .:/var/www/html
+
+    networks:
+      - iot_network
+
+
+networks:
+  iot_network:
+    external: true
